@@ -35,7 +35,7 @@
       "uniwersalna",
       "czysta linia"
     ],
-    "image": "/images/crew_cut.jpg"
+    "image": "./images/crew_cut.jpg"
   },
   {
     "name": "Crop (French Crop)",
@@ -54,7 +54,7 @@
       "nowoczesna",
       "łatwa stylizacja"
     ],
-    "image": "/images/french_crop.jpg"
+    "image": "../images/french_crop.jpg"
   },
   {
     "name": "Mod Cut",
