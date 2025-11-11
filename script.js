@@ -1,13 +1,12 @@
 async function loadHairstyles() {
   const res = await fetch("hairstyles.json");
   const data = await res.json();
-  displayHairstyles(data);
 
   const lengthFilter = document.getElementById("lengthFilter");
   const styleFilter = document.getElementById("styleFilter");
   const faceFilter = document.getElementById("faceFilter");
 
-  function applyFilters() {
+  async function applyFilters() {
     const lengthVal = lengthFilter.value;
     const styleVal = styleFilter.value;
     const faceVal = faceFilter.value;
@@ -19,15 +18,42 @@ async function loadHairstyles() {
       return matchLength && matchStyle && matchFace;
     });
 
-    displayHairstyles(filtered);
+    await displayHairstyles(filtered);
   }
 
   lengthFilter.addEventListener("change", applyFilters);
   styleFilter.addEventListener("change", applyFilters);
   faceFilter.addEventListener("change", applyFilters);
+
+  await applyFilters(); // pierwsze wyświetlenie
 }
 
-function displayHairstyles(list) {
+async function loadValidImages(imagePaths) {
+  const DEFAULT_IMAGE = "./images/haircut.jpg";
+  const validImages = [];
+
+  for (const src of imagePaths) {
+    if (!src || src.trim() === "") continue;
+
+    const img = new Image();
+    img.src = src.trim();
+
+    try {
+      await new Promise((resolve, reject) => {
+        img.onload = () => resolve();
+        img.onerror = () => reject();
+        setTimeout(() => reject(), 5000); // timeout 5s
+      });
+      validImages.push(img.src);
+    } catch (e) {
+      // pomijamy nieistniejące
+    }
+  }
+
+  return validImages.length > 0 ? validImages : [DEFAULT_IMAGE];
+}
+
+async function displayHairstyles(list) {
   const container = document.getElementById("hairstyleContainer");
   container.innerHTML = "";
 
@@ -36,33 +62,27 @@ function displayHairstyles(list) {
     return;
   }
 
-  const DEFAULT_IMAGE = "./images/haircut.jpg";
-
-  list.forEach(item => {
+  for (const item of list) {
     const card = document.createElement("div");
     card.className = "card";
 
-    // Pobierz obrazy, filtruj puste, jeśli brak → użyj domyślnego
-    let images = (item.images || [])
+    const rawImages = (item.images || [])
       .filter(src => src && src.trim() !== "")
       .map(src => src.trim());
 
-    // Jeśli brak zdjęć → użyj domyślnego
-    if (images.length === 0) {
-      images = [DEFAULT_IMAGE];
-    }
+    const validImages = await loadValidImages(rawImages);
 
     let galleryHTML = `
       <div class="gallery">
-        ${images.map((src, i) => `
+        ${validImages.map((src, i) => `
           <img src="${src}" alt="${item.name}" ${i === 0 ? 'class="active"' : ''} loading="lazy">
         `).join('')}
         
-        ${images.length > 1 ? `
+        ${validImages.length > 1 ? `
           <button class="gallery-nav prev" aria-label="Poprzednie zdjęcie">‹</button>
           <button class="gallery-nav next" aria-label="Następne zdjęcie">›</button>
           <div class="gallery-dots">
-            ${images.map((_, i) => `<span class="dot ${i === 0 ? 'active' : ''}"></span>`).join('')}
+            ${validImages.map((_, i) => `<span class="dot ${i === 0 ? 'active' : ''}"></span>`).join('')}
           </div>
         ` : ''}
       </div>
@@ -78,40 +98,10 @@ function displayHairstyles(list) {
 
     container.appendChild(card);
 
-    // === OBSŁUGA BŁĘDÓW ŁADOWANIA OBRAZU ===
-    const imgElements = card.querySelectorAll('.gallery img');
-    imgElements.forEach((img, index) => {
-      // Jeśli obraz się nie załaduje → zamień na domyślny
-      img.onerror = () => {
-        if (img.src !== DEFAULT_IMAGE) {
-          img.src = DEFAULT_IMAGE;
-          img.alt = `${item.name} (domyślne)`;
-        }
-      };
-
-      // Jeśli obraz już załadowany
-      img.onload = () => {
-        if (!img.classList.contains('active') && index === 0) {
-          img.classList.add('active');
-        }
-      };
-
-      // Jeśli obraz już w pamięci (cached)
-      if (img.complete) {
-        if (img.naturalWidth === 0) {
-          // Błąd – obraz nie istnieje
-          img.onerror();
-        } else if (index === 0) {
-          img.classList.add('active');
-        }
-      }
-    });
-
-    // Inicjalizuj galerię tylko jeśli >1 zdjęcie
-    if (images.length > 1) {
-      initGallery(card, images);
+    if (validImages.length > 1) {
+      setTimeout(() => initGallery(card, validImages), 0);
     }
-  });
+  }
 }
 
 function initGallery(card, images) {
@@ -149,7 +139,6 @@ function initGallery(card, images) {
     prevImage();
   });
 
-  // Swipe
   gallery.addEventListener('touchstart', (e) => {
     startX = e.touches[0].clientX;
     isSwiping = true;
@@ -172,7 +161,6 @@ function initGallery(card, images) {
     gallery.classList.remove('swiping');
   });
 
-  // Kliknięcie w zdjęcie = następne
   gallery.addEventListener('click', (e) => {
     if (e.target.closest('.gallery-nav')) return;
     if (e.target.tagName === 'IMG') {
