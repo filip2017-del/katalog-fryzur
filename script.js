@@ -36,20 +36,26 @@ function displayHairstyles(list) {
     return;
   }
 
+  const DEFAULT_IMAGE = "./images/haircut.jpg";
+
   list.forEach(item => {
     const card = document.createElement("div");
     card.className = "card";
 
-    // Domyślne zdjęcie jeśli brak
-    const images = item.images && item.images.length > 0
-      ? item.images
-      : ['https://via.placeholder.com/400x250?text=Brak+zdjęcia'];
+    // Pobierz obrazy, filtruj puste, jeśli brak → użyj domyślnego
+    let images = (item.images || [])
+      .filter(src => src && src.trim() !== "")
+      .map(src => src.trim());
 
-    // Generuj HTML galerii
+    // Jeśli brak zdjęć → użyj domyślnego
+    if (images.length === 0) {
+      images = [DEFAULT_IMAGE];
+    }
+
     let galleryHTML = `
       <div class="gallery">
         ${images.map((src, i) => `
-          <img src="${src}" alt="${item.name} - ${i + 1}" ${i === 0 ? 'class="active"' : ''}>
+          <img src="${src}" alt="${item.name}" ${i === 0 ? 'class="active"' : ''} loading="lazy">
         `).join('')}
         
         ${images.length > 1 ? `
@@ -72,7 +78,36 @@ function displayHairstyles(list) {
 
     container.appendChild(card);
 
-    // Tylko jeśli jest więcej niż 1 zdjęcie
+    // === OBSŁUGA BŁĘDÓW ŁADOWANIA OBRAZU ===
+    const imgElements = card.querySelectorAll('.gallery img');
+    imgElements.forEach((img, index) => {
+      // Jeśli obraz się nie załaduje → zamień na domyślny
+      img.onerror = () => {
+        if (img.src !== DEFAULT_IMAGE) {
+          img.src = DEFAULT_IMAGE;
+          img.alt = `${item.name} (domyślne)`;
+        }
+      };
+
+      // Jeśli obraz już załadowany
+      img.onload = () => {
+        if (!img.classList.contains('active') && index === 0) {
+          img.classList.add('active');
+        }
+      };
+
+      // Jeśli obraz już w pamięci (cached)
+      if (img.complete) {
+        if (img.naturalWidth === 0) {
+          // Błąd – obraz nie istnieje
+          img.onerror();
+        } else if (index === 0) {
+          img.classList.add('active');
+        }
+      }
+    });
+
+    // Inicjalizuj galerię tylko jeśli >1 zdjęcie
     if (images.length > 1) {
       initGallery(card, images);
     }
@@ -91,12 +126,8 @@ function initGallery(card, images) {
   let isSwiping = false;
 
   function showImage(index) {
-    imgs.forEach((img, i) => {
-      img.classList.toggle('active', i === index);
-    });
-    dots.forEach((dot, i) => {
-      dot.classList.toggle('active', i === index);
-    });
+    imgs.forEach((img, i) => img.classList.toggle('active', i === index));
+    dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
     currentIndex = index;
   }
 
@@ -108,7 +139,6 @@ function initGallery(card, images) {
     showImage((currentIndex - 1 + images.length) % images.length);
   }
 
-  // Kliknięcia
   nextBtn.addEventListener('click', (e) => {
     e.stopPropagation();
     nextImage();
@@ -119,7 +149,7 @@ function initGallery(card, images) {
     prevImage();
   });
 
-  // Swipe (touch)
+  // Swipe
   gallery.addEventListener('touchstart', (e) => {
     startX = e.touches[0].clientX;
     isSwiping = true;
@@ -131,31 +161,25 @@ function initGallery(card, images) {
     e.preventDefault();
   }, { passive: false });
 
-  gallery.addEventListener('touchend', (e) => {
+  gallery.addEventListener('touchend', () => {
     if (!isSwiping) return;
-    const endX = e.changedTouches[0].clientX;
+    const endX = event.changedTouches[0].clientX;
     const diff = startX - endX;
-
-    if (Math.abs(diff) > 50) { // minimalny ruch
-      if (diff > 0) {
-        nextImage();
-      } else {
-        prevImage();
-      }
+    if (Math.abs(diff) > 50) {
+      diff > 0 ? nextImage() : prevImage();
     }
-
     isSwiping = false;
     gallery.classList.remove('swiping');
   });
 
   // Kliknięcie w zdjęcie = następne
   gallery.addEventListener('click', (e) => {
+    if (e.target.closest('.gallery-nav')) return;
     if (e.target.tagName === 'IMG') {
       nextImage();
     }
   });
 
-  // Opcjonalnie: klawisze strzałek (jeśli karta ma fokus)
   card.tabIndex = 0;
   card.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowRight') nextImage();
@@ -163,5 +187,4 @@ function initGallery(card, images) {
   });
 }
 
-// Uruchom
 loadHairstyles();
