@@ -73,13 +73,102 @@ select:focus {
   box-shadow: 0 8px 16px rgba(255, 255, 255, 0.08);
 }
 
-.card img {
+/* Gallery – ukryte strzałki i kropki do hover */
+.card .gallery {
+  position: relative;
   width: 100%;
   height: 180px;
-  object-fit: cover;
+  overflow: hidden;
   border-bottom: 1px solid #333;
 }
 
+.card .gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  user-select: none;
+  -webkit-user-drag: none;
+  cursor: pointer;
+}
+
+.card .gallery img.active {
+  opacity: 1;
+}
+
+/* Ukryte domyślnie */
+.card .gallery-nav,
+.card .gallery-dots {
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+/* Pojawiają się po najechaniu */
+.card:hover .gallery-nav,
+.card:hover .gallery-dots {
+  opacity: 1;
+}
+
+/* Strzałki */
+.card .gallery-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  z-index: 10;
+}
+
+.card .gallery-nav:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.card .gallery-nav.prev { left: 10px; }
+.card .gallery-nav.next { right: 10px; }
+
+/* Kropki */
+.card .gallery-dots {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 10;
+}
+
+.card .gallery-dots .dot {
+  width: 8px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.card .gallery-dots .dot.active {
+  background: #fff;
+  transform: scale(1.2);
+}
+
+/* Swipe feedback */
+.card .gallery.swiping {
+  cursor: grabbing;
+}
+
+/* Tekst w karcie */
 .card h3 {
   margin: 1em 0 0.4em;
   font-size: 1.2em;
