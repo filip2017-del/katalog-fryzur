@@ -16,7 +16,7 @@
       "łatwa pielęgnacja",
       "minimalistyczna"
     ],
-    "image": "/katalog-fryzur/images/buzz_cut.jpg"
+    "image": "./images/buzz_cut.jpg"
   },
   {
     "name": "Crew Cut",
@@ -54,7 +54,7 @@
       "nowoczesna",
       "łatwa stylizacja"
     ],
-    "image": "../images/french_crop.jpg"
+    "image": "./images/french_crop.jpg"
   },
   {
     "name": "Mod Cut",
@@ -73,7 +73,7 @@
       "retro",
       "grzywka"
     ],
-    "image": "/images/mod_cut.jpg"
+    "image": "./images/mod_cut.jpg"
   },
   {
     "name": "Fade",
@@ -91,7 +91,7 @@
       "barberski",
       "czysty wygląd"
     ],
-    "image": "/images/fade.jpg"
+    "image": "./images/fade.jpg"
   },
   {
     "name": "Taper Fade",
@@ -109,7 +109,7 @@
       "subtelna",
       "czysta linia"
     ],
-    "image": "/images/taper_fade.jpg"
+    "image": "./images/taper_fade.jpg"
   },
   {
     "name": "Quiff",
@@ -128,7 +128,7 @@
       "objętość",
       "stylizacja"
     ],
-    "image": "/images/quiff.jpg"
+    "image": "./images/quiff.jpg"
   },
   {
     "name": "Pompadour",
@@ -147,7 +147,7 @@
       "objętość",
       "elegancka"
     ],
-    "image": "/images/pompadour.jpg"
+    "image": "./images/pompadour.jpg"
   },
   {
     "name": "Side Part",
@@ -165,7 +165,7 @@
       "biurowa",
       "czysty wygląd"
     ],
-    "image": "/images/side_part.jpg"
+    "image": "./images/side_part.jpg"
   },
   {
     "name": "Textured Crop",
@@ -183,7 +183,7 @@
       "tekstura",
       "modna"
     ],
-    "image": "/images/textured_crop.jpg"
+    "image": "./images/textured_crop.jpg"
   },
   {
     "name": "Modern Mullet",
@@ -202,7 +202,7 @@
       "alternatywna",
       "retro"
     ],
-    "image": "/images/modern_mullet.jpg"
+    "image": "./images/modern_mullet.jpg"
   },
   {
     "name": "Bro Flow",
@@ -221,7 +221,7 @@
       "naturalna",
       "luźny styl"
     ],
-    "image": "/images/bro_flow.jpg"
+    "image": "./images/bro_flow.jpg"
   },
   {
     "name": "Wolf Cut",
@@ -240,7 +240,7 @@
       "tekstura",
       "objętość"
     ],
-    "image": "/images/wolf_cut.jpg"
+    "image": "./images/wolf_cut.jpg"
   },
   {
     "name": "Shag",
@@ -258,7 +258,7 @@
       "objętość",
       "warstwy"
     ],
-    "image": "/images/shag.jpg"
+    "image": "./images/shag.jpg"
   },
   {
     "name": "Layered Waves",
@@ -276,7 +276,7 @@
       "naturalna",
       "tekstura"
     ],
-    "image": "/images/layered_waves.jpg"
+    "image": "./images/layered_waves.jpg"
   },
   {
     "name": "Man Bun",
@@ -295,7 +295,7 @@
       "długie włosy",
       "wygodna"
     ],
-    "image": "/images/man_bun.jpg"
+    "image": "./images/man_bun.jpg"
   },
   {
     "name": "Long Slick Back",
@@ -313,7 +313,7 @@
       "elegancka",
       "gładka"
     ],
-    "image": "/images/long_slick_back.jpg"
+    "image": "./images/long_slick_back.jpg"
   },
   {
     "name": "Flat Top",
@@ -331,7 +331,7 @@
       "precyzyjna",
       "wojskowa"
     ],
-    "image": "/images/flat_top.jpg"
+    "image": "./images/flat_top.jpg"
   },
   {
     "name": "Mohawk",
@@ -350,7 +350,7 @@
       "alternatywna",
       "kontrastowa"
     ],
-    "image": "/images/mohawk.jpg"
+    "image": "./images/mohawk.jpg"
   },
   {
     "name": "Faux Hawk",
@@ -369,7 +369,7 @@
       "modna",
       "subtelna"
     ],
-    "image": "/images/faux_hawk.jpg"
+    "image": "./images/faux_hawk.jpg"
   },
   {
     "name": "Loose Back Flow",
@@ -387,7 +387,7 @@
       "luźna",
       "naturalna"
     ],
-    "image": "/images/loose_back_flow.jpg"
+    "image": "./images/loose_back_flow.jpg"
   },
   {
     "name": "Medium Mullet",
@@ -405,7 +405,7 @@
       "retro",
       "tekstura"
     ],
-    "image": "/images/medium_mullet.jpg"
+    "image": "./images/medium_mullet.jpg"
   },
   {
     "name": "High & Tight",
@@ -423,7 +423,7 @@
       "wojskowa",
       "praktyczna"
     ],
-    "image": "/images/high_and_tight.jpg"
+    "image": "./images/high_and_tight.jpg"
   },
   {
     "name": "Natural Waves",
@@ -441,7 +441,7 @@
       "naturalna",
       "tekstura"
     ],
-    "image": "/images/natural_waves.jpg"
+    "image": "./images/natural_waves.jpg"
   },
   {
     "name": "Textured Fringe",
@@ -459,7 +459,7 @@
       "grzywka",
       "tekstura"
     ],
-    "image": "/images/textured_fringe.jpg"
+    "image": "./images/textured_fringe.jpg"
   },
   {
     "name": "Short Quiff",
@@ -477,7 +477,7 @@
       "czysta",
       "modna"
     ],
-    "image": "/images/short_quiff.jpg"
+    "image": "./images/short_quiff.jpg"
   },
   {
     "name": "Messy Mod Cut",
@@ -495,7 +495,7 @@
       "retro",
       "naturalna"
     ],
-    "image": "/images/messy_mod_cut.jpg"
+    "image": "./images/messy_mod_cut.jpg"
   },
   {
     "name": "Low Man Bun",
@@ -514,7 +514,7 @@
       "długie włosy",
       "luźna"
     ],
-    "image": "/images/low_man_bun.jpg"
+    "image": "./images/low_man_bun.jpg"
   },
   {
     "name": "Shaggy Medium",
@@ -533,7 +533,7 @@
       "warstwy",
       "tekstura"
     ],
-    "image": "/images/shaggy_medium.jpg"
+    "image": "./images/shaggy_medium.jpg"
   },
   {
     "name": "Caesar Cut",
@@ -551,7 +551,7 @@
       "retro",
       "krótka"
     ],
-    "image": "/images/caesar_cut.jpg"
+    "image": "./images/caesar_cut.jpg"
   },
   {
     "name": "Curtain Bangs",
@@ -570,7 +570,7 @@
       "grzywka",
       "naturalna"
     ],
-    "image": "/images/curtain_bangs.jpg"
+    "image": "./images/curtain_bangs.jpg"
   },
   {
     "name": "Shoulder-Length Waves",
@@ -588,7 +588,7 @@
       "naturalna",
       "luźna"
     ],
-    "image": "/images/shoulder_length_waves.jpg"
+    "image": "./images/shoulder_length_waves.jpg"
   },
   {
     "name": "Loose Slick Back",
@@ -607,6 +607,6 @@
       "elegancka",
       "swobodna"
     ],
-    "image": "/images/loose_slick_back.jpg"
+    "image": "./images/loose_slick_back.jpg"
   }
 ]
