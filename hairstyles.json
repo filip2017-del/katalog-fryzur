@@ -1,0 +1,612 @@
+[
+  {
+    "name": "Buzz Cut",
+    "length": "krótkie",
+    "style": "sportowy",
+    "faceShapes": [
+      "owalna",
+      "kwadratowa"
+    ],
+    "hairType": [
+      "proste",
+      "falowane"
+    ],
+    "description": "Bardzo krótka fryzura o równomiernej długości. Nie wymaga stylizacji.",
+    "tags": [
+      "łatwa pielęgnacja",
+      "minimalistyczna"
+    ],
+    "image": "/images/buzz_cut.jpg"
+  },
+  {
+    "name": "Crew Cut",
+    "length": "krótkie",
+    "style": "klasyczny",
+    "faceShapes": [
+      "owalna",
+      "okrągła",
+      "kwadratowa"
+    ],
+    "hairType": [
+      "proste"
+    ],
+    "description": "Krótko przycięte boki i nieco dłuższy top. Klasyczny, uniwersalny krój.",
+    "tags": [
+      "uniwersalna",
+      "czysta linia"
+    ],
+    "image": "/images/crew_cut.jpg"
+  },
+  {
+    "name": "Crop (French Crop)",
+    "length": "krótkie",
+    "style": "nowoczesny",
+    "faceShapes": [
+      "owalna",
+      "trójkątna"
+    ],
+    "hairType": [
+      "proste",
+      "falowane"
+    ],
+    "description": "Krótki top z prostą grzywką i mocno przyciętymi bokami.",
+    "tags": [
+      "nowoczesna",
+      "łatwa stylizacja"
+    ],
+    "image": "/images/french_crop.jpg"
+  },
+  {
+    "name": "Mod Cut",
+    "length": "średnie",
+    "style": "retro",
+    "faceShapes": [
+      "owalna",
+      "okrągła"
+    ],
+    "hairType": [
+      "proste",
+      "falowane"
+    ],
+    "description": "Średniej długości fryzura z grzywką, inspirowana stylem lat 60.",
+    "tags": [
+      "retro",
+      "grzywka"
+    ],
+    "image": "/images/mod_cut.jpg"
+  },
+  {
+    "name": "Fade",
+    "length": "krótkie",
+    "style": "nowoczesny",
+    "faceShapes": [
+      "owalna",
+      "kwadratowa"
+    ],
+    "hairType": [
+      "proste"
+    ],
+    "description": "Stopniowe przejście długości od bardzo krótkich boków do dłuższego topu.",
+    "tags": [
+      "barberski",
+      "czysty wygląd"
+    ],
+    "image": "/images/fade.jpg"
+  },
+  {
+    "name": "Taper Fade",
+    "length": "krótkie",
+    "style": "nowoczesny",
+    "faceShapes": [
+      "owalna",
+      "kwadratowa"
+    ],
+    "hairType": [
+      "proste"
+    ],
+    "description": "Delikatne przejście długości od boków ku górze. Subtelna wersja fade.",
+    "tags": [
+      "subtelna",
+      "czysta linia"
+    ],
+    "image": "/images/taper_fade.jpg"
+  },
+  {
+    "name": "Quiff",
+    "length": "średnie",
+    "style": "nowoczesny",
+    "faceShapes": [
+      "owalna",
+      "kwadratowa"
+    ],
+    "hairType": [
+      "proste",
+      "falowane"
+    ],
+    "description": "Uniesiony przód z lekką objętością i naturalnym wykończeniem.",
+    "tags": [
+      "objętość",
+      "stylizacja"
+    ],
+    "image": "/images/quiff.jpg"
+  },
+  {
+    "name": "Pompadour",
+    "length": "średnie",
+    "style": "klasyczny",
+    "faceShapes": [
+      "owalna",
+      "diamentowa"
+    ],
+    "hairType": [
+      "proste",
+      "falowane"
+    ],
+    "description": "Wysoki przód zaczesany do tyłu. Wymaga pomady lub wosku.",
+    "tags": [
+      "objętość",
+      "elegancka"
+    ],
+    "image": "/images/pompadour.jpg"
+  },
+  {
+    "name": "Side Part",
+    "length": "średnie",
+    "style": "klasyczny",
+    "faceShapes": [
+      "owalna",
+      "okrągła"
+    ],
+    "hairType": [
+      "proste"
+    ],
+    "description": "Włosy z wyraźnym przedziałkiem z boku i uporządkowanym topem.",
+    "tags": [
+      "biurowa",
+      "czysty wygląd"
+    ],
+    "image": "/images/side_part.jpg"
+  },
+  {
+    "name": "Textured Crop",
+    "length": "średnie",
+    "style": "nowoczesny",
+    "faceShapes": [
+      "owalna",
+      "trójkątna"
+    ],
+    "hairType": [
+      "falowane"
+    ],
+    "description": "Krótsza wersja cropa z mocno teksturowanym topem.",
+    "tags": [
+      "tekstura",
+      "modna"
+    ],
+    "image": "/images/textured_crop.jpg"
+  },
+  {
+    "name": "Modern Mullet",
+    "length": "średnie",
+    "style": "alternatywny",
+    "faceShapes": [
+      "owalna",
+      "okrągła"
+    ],
+    "hairType": [
+      "falowane",
+      "kręcone"
+    ],
+    "description": "Współczesna wersja klasycznego mulleta z płynnym przejściem długości.",
+    "tags": [
+      "alternatywna",
+      "retro"
+    ],
+    "image": "/images/modern_mullet.jpg"
+  },
+  {
+    "name": "Bro Flow",
+    "length": "długie",
+    "style": "casual",
+    "faceShapes": [
+      "owalna",
+      "trójkątna"
+    ],
+    "hairType": [
+      "falowane",
+      "proste"
+    ],
+    "description": "Średnio-długie włosy zaczesane do tyłu, układające się naturalnie.",
+    "tags": [
+      "naturalna",
+      "luźny styl"
+    ],
+    "image": "/images/bro_flow.jpg"
+  },
+  {
+    "name": "Wolf Cut",
+    "length": "długie",
+    "style": "alternatywny",
+    "faceShapes": [
+      "owalna",
+      "okrągła"
+    ],
+    "hairType": [
+      "falowane",
+      "kręcone"
+    ],
+    "description": "Warstwowa fryzura łącząca cechy mulleta i shaga.",
+    "tags": [
+      "tekstura",
+      "objętość"
+    ],
+    "image": "/images/wolf_cut.jpg"
+  },
+  {
+    "name": "Shag",
+    "length": "średnie",
+    "style": "retro",
+    "faceShapes": [
+      "owalna",
+      "diamentowa"
+    ],
+    "hairType": [
+      "falowane"
+    ],
+    "description": "Warstwowe cięcie z dużą objętością i naturalnym układem.",
+    "tags": [
+      "objętość",
+      "warstwy"
+    ],
+    "image": "/images/shag.jpg"
+  },
+  {
+    "name": "Layered Waves",
+    "length": "średnie",
+    "style": "naturalny",
+    "faceShapes": [
+      "owalna",
+      "okrągła"
+    ],
+    "hairType": [
+      "falowane"
+    ],
+    "description": "Średniej długości włosy ułożone warstwowo, podkreślające fale.",
+    "tags": [
+      "naturalna",
+      "tekstura"
+    ],
+    "image": "/images/layered_waves.jpg"
+  },
+  {
+    "name": "Man Bun",
+    "length": "długie",
+    "style": "alternatywny",
+    "faceShapes": [
+      "owalna",
+      "trójkątna"
+    ],
+    "hairType": [
+      "proste",
+      "falowane"
+    ],
+    "description": "Długie włosy spięte w koka z tyłu głowy.",
+    "tags": [
+      "długie włosy",
+      "wygodna"
+    ],
+    "image": "/images/man_bun.jpg"
+  },
+  {
+    "name": "Long Slick Back",
+    "length": "długie",
+    "style": "klasyczny",
+    "faceShapes": [
+      "owalna",
+      "kwadratowa"
+    ],
+    "hairType": [
+      "proste"
+    ],
+    "description": "Długie włosy zaczesane gładko do tyłu z użyciem pomady.",
+    "tags": [
+      "elegancka",
+      "gładka"
+    ],
+    "image": "/images/long_slick_back.jpg"
+  },
+  {
+    "name": "Flat Top",
+    "length": "krótkie",
+    "style": "sportowy",
+    "faceShapes": [
+      "kwadratowa",
+      "owalna"
+    ],
+    "hairType": [
+      "proste"
+    ],
+    "description": "Krótki top przycięty na płasko, boki mocno skrócone.",
+    "tags": [
+      "precyzyjna",
+      "wojskowa"
+    ],
+    "image": "/images/flat_top.jpg"
+  },
+  {
+    "name": "Mohawk",
+    "length": "średnie",
+    "style": "alternatywny",
+    "faceShapes": [
+      "owalna",
+      "okrągła"
+    ],
+    "hairType": [
+      "proste",
+      "falowane"
+    ],
+    "description": "Pas włosów na środku głowy, boki wygolone lub bardzo krótkie.",
+    "tags": [
+      "alternatywna",
+      "kontrastowa"
+    ],
+    "image": "/images/mohawk.jpg"
+  },
+  {
+    "name": "Faux Hawk",
+    "length": "średnie",
+    "style": "nowoczesny",
+    "faceShapes": [
+      "owalna",
+      "trójkątna"
+    ],
+    "hairType": [
+      "proste",
+      "falowane"
+    ],
+    "description": "Lżejsza wersja mohawka, z krótszymi bokami i uniesionym środkiem.",
+    "tags": [
+      "modna",
+      "subtelna"
+    ],
+    "image": "/images/faux_hawk.jpg"
+  },
+  {
+    "name": "Loose Back Flow",
+    "length": "średnie",
+    "style": "naturalny",
+    "faceShapes": [
+      "owalna",
+      "kwadratowa"
+    ],
+    "hairType": [
+      "falowane"
+    ],
+    "description": "Włosy średniej długości swobodnie zaczesane do tyłu.",
+    "tags": [
+      "luźna",
+      "naturalna"
+    ],
+    "image": "/images/loose_back_flow.jpg"
+  },
+  {
+    "name": "Medium Mullet",
+    "length": "średnie",
+    "style": "retro",
+    "faceShapes": [
+      "owalna",
+      "okrągła"
+    ],
+    "hairType": [
+      "falowane"
+    ],
+    "description": "Mullet o średniej długości, lekko warstwowy i teksturowany.",
+    "tags": [
+      "retro",
+      "tekstura"
+    ],
+    "image": "/images/medium_mullet.jpg"
+  },
+  {
+    "name": "High & Tight",
+    "length": "krótkie",
+    "style": "wojskowy",
+    "faceShapes": [
+      "kwadratowa",
+      "owalna"
+    ],
+    "hairType": [
+      "proste"
+    ],
+    "description": "Bardzo krótko wygolone boki i tył, krótki top.",
+    "tags": [
+      "wojskowa",
+      "praktyczna"
+    ],
+    "image": "/images/high_and_tight.jpg"
+  },
+  {
+    "name": "Natural Waves",
+    "length": "średnie",
+    "style": "naturalny",
+    "faceShapes": [
+      "owalna",
+      "okrągła"
+    ],
+    "hairType": [
+      "falowane"
+    ],
+    "description": "Fryzura podkreślająca naturalny układ fal.",
+    "tags": [
+      "naturalna",
+      "tekstura"
+    ],
+    "image": "/images/natural_waves.jpg"
+  },
+  {
+    "name": "Textured Fringe",
+    "length": "średnie",
+    "style": "nowoczesny",
+    "faceShapes": [
+      "owalna",
+      "trójkątna"
+    ],
+    "hairType": [
+      "falowane"
+    ],
+    "description": "Średniej długości grzywka o teksturowanym wykończeniu.",
+    "tags": [
+      "grzywka",
+      "tekstura"
+    ],
+    "image": "/images/textured_fringe.jpg"
+  },
+  {
+    "name": "Short Quiff",
+    "length": "krótkie",
+    "style": "nowoczesny",
+    "faceShapes": [
+      "owalna",
+      "kwadratowa"
+    ],
+    "hairType": [
+      "proste"
+    ],
+    "description": "Krótsza wersja quiffa z lekkim uniesieniem z przodu.",
+    "tags": [
+      "czysta",
+      "modna"
+    ],
+    "image": "/images/short_quiff.jpg"
+  },
+  {
+    "name": "Messy Mod Cut",
+    "length": "średnie",
+    "style": "retro",
+    "faceShapes": [
+      "owalna",
+      "okrągła"
+    ],
+    "hairType": [
+      "falowane"
+    ],
+    "description": "Luźna wersja Mod Cuta o bardziej naturalnym układzie.",
+    "tags": [
+      "retro",
+      "naturalna"
+    ],
+    "image": "/images/messy_mod_cut.jpg"
+  },
+  {
+    "name": "Low Man Bun",
+    "length": "długie",
+    "style": "alternatywny",
+    "faceShapes": [
+      "owalna",
+      "trójkątna"
+    ],
+    "hairType": [
+      "proste",
+      "falowane"
+    ],
+    "description": "Długie włosy zebrane w niski kok na karku.",
+    "tags": [
+      "długie włosy",
+      "luźna"
+    ],
+    "image": "/images/low_man_bun.jpg"
+  },
+  {
+    "name": "Shaggy Medium",
+    "length": "średnie",
+    "style": "naturalny",
+    "faceShapes": [
+      "owalna",
+      "okrągła"
+    ],
+    "hairType": [
+      "falowane",
+      "kręcone"
+    ],
+    "description": "Warstwowa fryzura średniej długości z nieuporządkowanym efektem.",
+    "tags": [
+      "warstwy",
+      "tekstura"
+    ],
+    "image": "/images/shaggy_medium.jpg"
+  },
+  {
+    "name": "Caesar Cut",
+    "length": "krótkie",
+    "style": "klasyczny",
+    "faceShapes": [
+      "owalna",
+      "okrągła"
+    ],
+    "hairType": [
+      "proste"
+    ],
+    "description": "Krótki top z prostą grzywką inspirowany fryzurami rzymskimi.",
+    "tags": [
+      "retro",
+      "krótka"
+    ],
+    "image": "/images/caesar_cut.jpg"
+  },
+  {
+    "name": "Curtain Bangs",
+    "length": "długie",
+    "style": "retro",
+    "faceShapes": [
+      "owalna",
+      "diamentowa"
+    ],
+    "hairType": [
+      "proste",
+      "falowane"
+    ],
+    "description": "Długie włosy z przedziałkiem po środku i miękko opadającą grzywką.",
+    "tags": [
+      "grzywka",
+      "naturalna"
+    ],
+    "image": "/images/curtain_bangs.jpg"
+  },
+  {
+    "name": "Shoulder-Length Waves",
+    "length": "długie",
+    "style": "naturalny",
+    "faceShapes": [
+      "owalna",
+      "okrągła"
+    ],
+    "hairType": [
+      "falowane"
+    ],
+    "description": "Fale o długości do ramion, naturalnie ułożone.",
+    "tags": [
+      "naturalna",
+      "luźna"
+    ],
+    "image": "/images/shoulder_length_waves.jpg"
+  },
+  {
+    "name": "Loose Slick Back",
+    "length": "długie",
+    "style": "klasyczny",
+    "faceShapes": [
+      "owalna",
+      "kwadratowa"
+    ],
+    "hairType": [
+      "proste",
+      "falowane"
+    ],
+    "description": "Długie włosy swobodnie zaczesane do tyłu z lekkim połyskiem.",
+    "tags": [
+      "elegancka",
+      "swobodna"
+    ],
+    "image": "/images/loose_slick_back.jpg"
+  }
+]
